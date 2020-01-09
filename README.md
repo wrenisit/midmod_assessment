@@ -8,7 +8,7 @@ We will be searching the Harry Potter API by Hogwarts house (e.g Griffindor, Huf
 
 * Clone this repo
 * `bundle install`
-* `figaro install`
+* `bundle exec figaro install`
 * `rake db:{create,migrate}`
 * `rails s`
 

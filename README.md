@@ -14,7 +14,7 @@ We will be searching the Harry Potter API by Hogwarts house (e.g Griffindor, Huf
 
 ## Assignment
 
-We will be using the [Potter Api](https://www.potterapi.com/#documentation). You will need to sign up for an api key.
+We will be using the [Potter Api](https://www.potterapi.com). You will need to sign up for an api key.
 
 Complete the following user story. Be sure to TDD all of your work.
 

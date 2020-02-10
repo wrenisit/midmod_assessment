@@ -10,6 +10,8 @@ class SearchController < ApplicationController
       houses[house_info["name"]] = house_info["_id"]
     end
     search_house = houses[params[:house]]
+    @house_name = params["house"]
+    
     members_response = conn.get("houses/#{search_house}?key=#{mykey}")
     members_parsed = JSON.parse(members_response.body)
     members = members_parsed[0]["members"]
@@ -19,14 +21,11 @@ class SearchController < ApplicationController
       studentresponse = conn.get("characters/#{k["id"]}?key=#{mykey}")
       student = JSON.parse(studentresponse.body)
       student.map do |student|
-        binding.pry
-        if student[0]["orderOfThePhoenix"] == true
-          @order << student[0]
+        if student["orderOfThePhoenix"] == true
+          @order << student
         end
       end
       @order
     end
-    binding.pry
   end
-
 end

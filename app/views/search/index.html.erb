@@ -1,7 +1,7 @@
 <h1>Members</h1>
 
 <% @order.each do |member| %>
-<% if member["house"] == @house_name %>
+<% binding.pry %>
   <h3>Name: <%= member["name"] %></h3>
     <% if member["role"] %>
       <h3>Role: <%= member["role"] %></h3>
@@ -10,5 +10,4 @@
     <% if member["patronus"] %>
       <h3>Patronus: <%= member["patronus"] %></h3>
       <% end %>
-  <% end %>
 <% end %>

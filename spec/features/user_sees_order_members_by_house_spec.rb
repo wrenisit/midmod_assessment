@@ -5,7 +5,7 @@ RSpec.describe "as a user" do
 
     visit '/'
     select "Gryffindor", from: :house
-    click_on "Search For Members"
+    click_on("Search For Members")
 
     expect(current_path).to eq('/search')
     expect(page).to have_content("21 Members")
